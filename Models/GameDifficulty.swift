@@ -12,35 +12,24 @@ enum GameDifficulty: String, CaseIterable, Identifiable, Codable {
     var title: String {
         switch self {
         case .chapterOne:
-            return "第一章・新手村試煉"
+            return "觀察入門"
         case .chapterTwo:
-            return "第二章・迷霧森林"
+            return "穩定挑戰"
         case .chapterThree:
-            return "第三章・彩石古塔"
+            return "敏銳試煉"
         case .chapterFour:
-            return "第四章・星火王城"
+            return "極限辨色"
         case .chapterFive:
-            return "第五章・終焉王座"
+            return "大師模式"
         }
     }
 
     var shortTitle: String {
-        switch self {
-        case .chapterOne:
-            return "第一章"
-        case .chapterTwo:
-            return "第二章"
-        case .chapterThree:
-            return "第三章"
-        case .chapterFour:
-            return "第四章"
-        case .chapterFive:
-            return "第五章"
-        }
+        title
     }
 
     var analyticsTitle: String {
-        "\(shortTitle)表現"
+        "\(title)表現"
     }
 
     var colorDifferenceScale: Double {
